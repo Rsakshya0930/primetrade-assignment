@@ -1,0 +1,25 @@
+:root {
+  --bg: #0f1117; --surface: #1a1d27; --card: #21263a; --border: #2e3348;
+  --accent: #6c63ff; --accent-light: #8b85ff; --text: #e8eaf6;
+  --muted: #8892b0; --success: #4caf89; --danger: #e25e6a; --warning: #f0a050;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Space Grotesk', sans-serif; }
+input, textarea, select {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  color: var(--text); font-family: inherit; font-size: 14px; padding: 10px 14px;
+  width: 100%; outline: none; transition: border-color .2s;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent); }
+button { cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 500;
+  border: none; border-radius: 8px; padding: 10px 20px; transition: all .2s; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-light); }
+.btn-primary:disabled { opacity: .6; cursor: not-allowed; }
+.btn-danger { background: transparent; border: 1px solid var(--danger); color: var(--danger); }
+.btn-danger:hover { background: var(--danger); color: #fff; }
+.btn-ghost { background: transparent; border: 1px solid var(--border); color: var(--muted); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.form-group label { font-size: 13px; color: var(--muted); }
+.error-msg { color: var(--danger); font-size: 13px; margin-top: 4px; }
